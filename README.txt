@@ -5,7 +5,8 @@ calling a remote applet that will charge the necessary tools to read the tables
 of a local/remote database.
 
 The project is open source to give a level of confidence to the users, because
-they will be executing a remote tool against the local/remote data.
+they will be executing a remote tool against the local/remote data. The license
+is the MIT license, for more details please take a look at LICENSE.txt.
 
 The applet could also be installed locally in any server in order to be called
 from a trusted internal environment.
