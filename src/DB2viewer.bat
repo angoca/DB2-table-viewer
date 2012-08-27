@@ -21,4 +21,4 @@
 :: SOFTWARE.
 
 
-appletviewer -J-Djava.security.policy=javapolicy index.html
+appletviewer -J-Djava.security.policy=java.policy.applet index.html
