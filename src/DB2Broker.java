@@ -43,7 +43,7 @@ public class DB2Broker {
     /**
      * Graphic interface.
      */
-    private Browser browserUI;
+    private DB2Viewer browserUI;
     /**
      * Database connection.
      */
@@ -57,7 +57,7 @@ public class DB2Broker {
      */
     private Statement stmt;
 
-    public DB2Broker(final Browser ui) {
+    public DB2Broker(final DB2Viewer ui) {
         this.browserUI = ui;
     }
 
@@ -197,6 +197,7 @@ public class DB2Broker {
         } catch (SQLException e) {
             this.showError("SQL error", e);
         }
+        browserUI.showStatus("Connected");
         return ret;
     }
 
@@ -208,6 +209,7 @@ public class DB2Broker {
      */
     void executeQuery(final String sentence) {
         this.browserUI.showStatus("Processing queries");
+        System.out.println("Executing: " + sentence);
         try {
             this.stmt = this.conn.createStatement();
             this.result = this.stmt.executeQuery(sentence);
