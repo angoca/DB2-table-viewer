@@ -39,7 +39,7 @@ import javax.swing.SpringLayout;
  * @author Andres Gomez Casanova
  * @version 2012-08-27
  */
-public class Browser extends JApplet implements ActionListener {
+public class DB2Viewer extends JApplet implements ActionListener {
 
     /**
      * Generated ID.
@@ -74,7 +74,7 @@ public class Browser extends JApplet implements ActionListener {
     /**
      * Default constructor.
      */
-    public Browser() {
+    public DB2Viewer() {
         // Nothing.
     }
 
