@@ -130,7 +130,7 @@ public class Browser extends JApplet implements ActionListener {
 
         this.getContentPane().validate();
         this.tableResults.validate();
-        this.tableResults.setAutoResizeMode(JTable.AUTO_RESIZE_ALL_COLUMNS);
+        this.tableResults.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
 
         springLayout.putConstraint(SpringLayout.NORTH, this.scrollPane, 6,
                 SpringLayout.SOUTH, this.labelResults);
