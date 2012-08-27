@@ -81,7 +81,15 @@ $ git checkout gh-pages
     <a href="https://github.com/angoca/DB2-table-viewer/tarball/master" class="tar">tar</a><a href="https://github.com/angoca/DB2-table-viewer/zipball/master" class="zip">zip</a><a href="" class="code">source code</a>
     <p class="name"></p>
   </div>
-
+  <applet code="DB2Viewer.class" width="600" height="600"
+    archive="db2viewer.jar">
+    <param name="server" value="localhost" />
+    <param name="port" value="50000" />
+    <param name="database" value="sample" />
+    <param name="user" value="db2admin" />
+    <param name="password" value="admin" />
+    Your Internet browser does not support Java applets.
+  </applet>
   
 </body>
 </html>
