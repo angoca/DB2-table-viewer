@@ -168,7 +168,11 @@ public class DB2Viewer extends JApplet implements ActionListener {
             this.db2.getCredentials();
         } else {
             // Connect with the provided parameters from the HTML.
-            this.db2.connect(server, port, database, user, password);
+            final boolean ret = this.db2.connect(server, port, database, user,
+                    password);
+            if (!ret){
+                this.db2.getCredentials();
+            }
         }
     }
 
