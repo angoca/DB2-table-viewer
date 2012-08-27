@@ -137,6 +137,9 @@ public class DB2Broker {
             case Types.VARCHAR:
                 types.add(new Integer(Types.VARCHAR));
                 break;
+            case Types.CLOB:
+                types.add(new Integer(Types.CLOB));
+                break;
             default:
                 int type = resultMetaData.getColumnType(i);
 
@@ -404,6 +407,14 @@ public class DB2Broker {
                     value = "NULL";
                 } else {
                     value = valueString;
+                }
+                break;
+            case Types.CLOB:
+                valueString = result.getString(k);
+                if (result.wasNull()) {
+                    value = "NULL";
+                } else {
+                    value = "CLOB";
                 }
                 break;
             default:
