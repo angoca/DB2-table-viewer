@@ -11,8 +11,14 @@ is the MIT license, for more details please take a look at LICENSE.txt.
 The applet could also be installed locally in any server in order to be called
 from a trusted internal environment.
 
-The objective is to create a basic way to execute queries agaist a DB2 database,
+The objective is to create a basic way to execute queries against a DB2 database,
 and prevent the configuration of a bigger tools such as IBM Data Studio. This is
 necessary after the Control Center removal in DB2 10. In this version, there is
 no-way to execute a query from a provided GUI, the only way is via CLP, and not
-in all cases is the best way to visaulize the output. 
+in all cases is the best way to visualize the output.
+
+
+Technical notes:
+
+In order to sing a jar:
+jarsigner -keystore DB2Viewer.sign DB2viewer.jar DB2Viewer
